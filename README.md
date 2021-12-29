@@ -28,7 +28,7 @@ Observe the following pattern is valid for the case of 9x9 grids. This pattern t
 ## How I build the initial grid from the full grid
 
 
-If I start with an empty grid, I get a heap memory exception for n >= 5. This is why for big n I am building the full valid solution for the general case n, following the idea in the diagram, and then randomly making log(n^2) blocks empty, where log is in base 2. The logarithm is chosen because the complexity of the algorithm is exponential, hence to compensate for that growth we take the inverse of the exponential as the growth rate of the number of empty cells. 
+If I start with an empty grid, I get a heap memory exception for n >= 5. Hence it is better to start from a state where as few cells are empty as possible, and in the same time enough of them are non-empty so that my experiments are relevant. This is why for big n I am building the full valid solution for the general case n, following the idea in the diagram, and then randomly making log(n^2) blocks empty, where log is in base 2. Note n^2 is the number of blocks in the grid. The logarithm is chosen because the complexity of the algorithm is exponential, hence to compensate for that growth we take the inverse of the exponential as the growth rate of the number of empty cells. 
 
 The more sparsely generated will the soon-emptied blocks be, the better. In rare cases, they get sampled in the same connected component in the graph formed by the empty nodes, and I am providing the analysis for the cases when this does not happen. Most of the time we do not get these rare cases, which take more than 5 minutes to solve, compared to less than one second as one of the .png file shows. This is enough for the purposes of these experiments.
 
