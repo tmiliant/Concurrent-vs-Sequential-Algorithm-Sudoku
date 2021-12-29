@@ -42,4 +42,4 @@ The concurrent algorithm performs worse than the sequential algorithm, presumabl
 
 ## Running the code
 
-scala Sudoku.scala test.sud <sudoku instance size> --<true/false/empty> --conc <number of workers>
+scala Sudoku.scala test.sud <sudoku instance size like 2,3,...,8> --true --conc <number of workers>
