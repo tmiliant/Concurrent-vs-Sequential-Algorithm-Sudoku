@@ -37,19 +37,5 @@ object Sudoku{
         println
         io.threadcso.exit
 
-
-
-        /* if(useConc){
-            solver1(p, _.complete) match{
-                case Some(p1) => {p1.foreach(_.printPartial)}
-                case None => println("No solution found")
-            }
-            io.threadcso.exit}
-        else{solver2(p, _.complete) match{
-            case Some(p1) => p1.printPartial
-            case None => println("No solution found")
-        }
-            io.threadcso.exit} */
-
     }
 }
