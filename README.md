@@ -24,7 +24,7 @@ According to the plot, I am using 4 workers. My laptop has 4 cores, so I am not 
 
 The more sparsely generated will the soon-emptied blocks be, the better. In rare cases, they get sampled in the same connected component in the graph formed by the empty nodes, and I am providing the analysis for the cases when this does not happen. Most of the time we do not get these rare cases, which take more than 5 minutes to solve, compared to less than one second as one of the .png file shows. This is enough for the purposes of these experiments.
 
-The concurrent algorithm performs worse than the sequential algorithm, presumably because this implementation uses a stack. Even if the stack is not explicit, the recursive calls make the stack implicit, because of the calls of the recursions lie on the recursion stack. A stack is inherently hard to parralelize, because the threads will have to work on that stack and there will be a lot of latency because of that. Since this implementation uses a concurrent stack, it is most likely  because of this that the algorithm does not improve upon its sequential counterpart. 
+The concurrent algorithm performs worse than the sequential algorithm, presumably because this implementation uses a stack. Even if the stack is not explicit, the recursive calls make the stack implicit, because the calls of the recursions lie on the recursion stack. A stack is inherently hard to parralelize, because the threads will have to work on that stack and there will be a lot of latency because of that. Since this implementation uses a concurrent stack, it is most likely  because of this that the algorithm does not improve upon its sequential counterpart. 
 
 ## Running the code
 
