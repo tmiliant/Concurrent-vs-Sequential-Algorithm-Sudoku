@@ -38,7 +38,7 @@ According to the plot, I choose to use 4 workers. My laptop has 4 cores, so I am
 
 ## Result
 
-The concurrent algorithm performs worse than the sequential algorithm, presumably because this implementation uses a stack. Even if the stack is not explicit, the recursive calls make the stack implicit, because the calls of the recursions lie on the recursion stack. A stack is inherently hard to parallelize, because the threads will have to work on that same stack and there will be a lot of latency because of that. Since this implementation uses a concurrent stack, it is most likely  because of this that the algorithm does not improve upon its sequential counterpart. 
+The concurrent algorithm performs worse than the sequential algorithm, presumably because this implementation uses a stack. Even when the stack is not explicit, the recursive calls make the stack implicit, because the calls of the recursions lie on the recursion stack. A stack is inherently hard to parallelize, because the threads will have to work on that same stack and there will be a lot of latency because of that. Since this implementation uses a concurrent stack, it is most likely  because of this that the algorithm does not improve upon its sequential counterpart. 
 
 ## Running the code
 
