@@ -1,6 +1,6 @@
 # Concurrent algorithm for Sudoku and comparison with sequential algorithm
 
-In this repository I include a sequential algorithm for Sudoku as well as a concurrent algorithm for it. I am using Scala. In particular, I am using the skills learned in the Concurrent Programming course taught in the University of Oxford CS Department. I am availing myself of the CSO library, the one I learned concurrent programming with, and please see https://www.cs.ox.ac.uk/people/bernard.sufrin/personal/CSO/ for a reference. This is a relatively complex object oriented programming architecture which offers great modularity, so the code is easily maintained and updated. 
+In this repository I include a sequential algorithm for Sudoku as well as a concurrent algorithm for it. I am using Scala. In particular, I am using the skills learned in the Concurrent Programming course taught in the University of Oxford CS Department. I am availing myself of the CSO library, the one I learned concurrent programming with, and please see https://www.cs.ox.ac.uk/people/bernard.sufrin/personal/CSO/ for a reference. I offer a relatively complex object oriented programming architecture which offers great modularity, so the code is easily maintained and updated. 
 
 ## Approach followed in the analysis of experiments
 
