@@ -10,8 +10,6 @@ class Partial(n: Int){
      * n must be the square of a natural number. */
     private val contents = Array.ofDim[Int](n*n, n*n)
 
-
-    /* TODO: solve issue of processing n-digit numbers where n is at least 2 */
     /** Initialise from a file. */
     def init(fname: String, generate: String) = {
       if(generate=="--true"){
