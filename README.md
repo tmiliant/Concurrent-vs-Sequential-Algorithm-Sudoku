@@ -36,6 +36,8 @@ The more sparsely generated will the soon-emptied blocks be, the better. In rare
 
 According to the plot, I choose to use 4 workers. My laptop has 4 cores, so I am not surprised by the plot. Just for fun, I also tried 1000 workers, which dramatically increases the runtime relatively, and this is due to the complexity incurred by the latency in the communications between these processes. This trade-off is indeed observed in the plot: initially, the complexity due to message passing between the processes is almost non-existent, whereas as the number of processes increases, this complexity will outweigh the benefits that concurrency is supposed to offer.
 
+<img src = "https://user-images.githubusercontent.com/58377307/147743746-d1933970-4015-4322-a892-2629d4b4f295.jpg" height="400" width="500">
+
 ## Result
 
 The concurrent algorithm performs worse than the sequential algorithm, presumably because this implementation uses a stack. Even when the stack is not explicit, the recursive calls make the stack implicit, because the calls of the recursions lie on the recursion stack - c.f. backtracking algorithms. A stack is inherently hard to parallelize, because the threads will have to work on that same stack and there will be a lot of latency because of that. Since this implementation uses a concurrent stack, it is most likely  because of this that the algorithm does not improve upon its sequential counterpart. 
