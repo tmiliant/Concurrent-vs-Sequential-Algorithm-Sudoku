@@ -40,6 +40,8 @@ According to the plot, I choose to use 4 workers. My laptop has 4 cores, so I am
 
 The concurrent algorithm performs worse than the sequential algorithm, presumably because this implementation uses a stack. Even when the stack is not explicit, the recursive calls make the stack implicit, because the calls of the recursions lie on the recursion stack - c.f. backtracking algorithms. A stack is inherently hard to parallelize, because the threads will have to work on that same stack and there will be a lot of latency because of that. Since this implementation uses a concurrent stack, it is most likely  because of this that the algorithm does not improve upon its sequential counterpart. 
 
+<img src = "https://user-images.githubusercontent.com/58377307/147743736-6565f2a4-d154-4bdb-b240-2ee9568b7367.jpg" height="300" width="600">
+
 ## Running the code
 
 scala Sudoku.scala test.sud <sudoku instance size like 2,3,...,8> --true --conc <number of workers>
