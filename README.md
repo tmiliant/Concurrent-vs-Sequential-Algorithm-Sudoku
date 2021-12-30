@@ -34,9 +34,9 @@ The more sparsely generated will the soon-emptied blocks be, the better. In rare
 
 ## How I choose the number of workers
 
-According to the plot, I choose to use 4 workers. My laptop has 4 cores, so I am not surprised by the plot. Just for fun, I also tried 1000 workers, which dramatically increases the runtime relatively, and this is due to the complexity incurred by the latency in the communications between these processes. This trade-off is indeed observed in the plot: initially, the complexity due to message passing between the processes is almost non-existent, whereas as the number of processes increases, this complexity will outweigh the benefits that concurrency is supposed to offer.
+I am running the algorithm with different values for the number of workers, each time for the fixed empty 9x9 grid. According to the plot, I choose to use 4 workers. My laptop has 4 cores, so I am not surprised by the plot. Just for fun, I also tried 1000 workers, which dramatically increases the runtime relatively, and this is due to the complexity incurred by the latency in the communications between these processes. This trade-off is indeed observed in the plot: initially, the complexity due to message passing between the processes is almost non-existent, whereas as the number of processes increases, this complexity will outweigh the benefits that concurrency is supposed to offer.
 
-<img src = "https://user-images.githubusercontent.com/58377307/147743746-d1933970-4015-4322-a892-2629d4b4f295.jpg" height="400" width="500">
+<img src = "https://user-images.githubusercontent.com/58377307/147744960-d3e224a8-4d04-43a5-8a96-a2aaafa0acc8.jpg" height="400" width="500">
 
 ## Result
 
