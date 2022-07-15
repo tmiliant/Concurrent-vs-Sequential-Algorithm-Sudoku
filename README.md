@@ -40,7 +40,9 @@ I am running the algorithm with different values for the number of workers, each
 
 ## Result
 
-The concurrent algorithm performs worse than the sequential algorithm, presumably because this implementation uses a stack. Even when the stack is not explicit, the recursive calls make the stack implicit, because the calls of the recursions lie on the recursion stack - c.f. backtracking algorithms. A stack is inherently hard to parallelize, because the threads will have to work on that same stack and there will be a lot of latency because of that. Since this implementation uses a concurrent stack, it is most likely  because of this that the algorithm does not improve upon its sequential counterpart. 
+The concurrent algorithm performs worse than the sequential algorithm, presumably because this implementation uses a stack. Even when the stack is not explicit, the recursive calls make the stack implicit, because the calls of the recursions lie on the recursion stack - c.f. backtracking algorithms. A stack is inherently hard to parallelize, because the threads will have to work on that same stack and there will be a lot of latency because of that. Since this implementation uses a concurrent stack, it is most likely  because of this that the algorithm does not improve upon its sequential counterpart.  
+
+See here https://stackoverflow.com/questions/67489202/why-is-using-the-gpu-slower-than-using-the-cpu for an analogy for CPU vs GPU.
 
 <img src = "https://user-images.githubusercontent.com/58377307/147743736-6565f2a4-d154-4bdb-b240-2ee9568b7367.jpg" height="300" width="600">
 
